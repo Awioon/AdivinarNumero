@@ -18,32 +18,32 @@ body {
 }
 
 h1 {
-    font-size: 6vw;
-    margin-bottom: 5vw;
+    font-size: 4vw; /* Cambiado de 6vw a 4vw */
+    margin-bottom: 3vw; /* Cambiado de 5vw a 3vw */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
-    font-size: 4vw;
-    margin-bottom: 3vw;
+    font-size: 2.5vw; /* Cambiado de 4vw a 2.5vw */
+    margin-bottom: 2vw; /* Cambiado de 3vw a 2vw */
 }
 
 .help {
-    font-size: 3vw;
+    font-size: 2vw; /* Cambiado de 3vw a 2vw */
     color: #ddd;
-    margin-bottom: 5vw;
+    margin-bottom: 3vw; /* Cambiado de 5vw a 3vw */
 }
 
 .intentos {
-    font-size: 5vw;
+    font-size: 3.5vw; /* Cambiado de 5vw a 3.5vw */
     font-weight: bold;
     color: #ee4535;
-    margin-bottom: 5vw;
+    margin-bottom: 3vw; /* Cambiado de 5vw a 3vw */
 }
 
 .num {
-    font-size: 4vw;
-    padding: 3vw;
+    font-size: 3vw; /* Cambiado de 4vw a 3vw */
+    padding: 2vw; /* Cambiado de 3vw a 2vw */
     width: 80%;
     border-radius: 50px;
     border: 2px solid #fff;
@@ -51,7 +51,7 @@ p {
     color: #fff;
     text-align: center;
     transition: all 0.3s ease;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw; /* Cambiado de 3vw a 2vw */
 }
 
 .num::placeholder {
@@ -66,8 +66,8 @@ p {
 }
 
 button {
-    font-size: 4vw;
-    padding: 3vw;
+    font-size: 3vw; /* Cambiado de 4vw a 3vw */
+    padding: 2vw; /* Cambiado de 3vw a 2vw */
     border-radius: 50px;
     border: 2px solid #fff;
     background-color: #ff6f61;
@@ -104,9 +104,9 @@ button:hover {
 }
 
 #pista {
-    font-size: 4vw;
-    margin-top: 5vw;
-    padding: 3vw;
+    font-size: 3vw; /* Cambiado de 4vw a 3vw */
+    margin-top: 3vw; /* Cambiado de 5vw a 3vw */
+    padding: 2vw; /* Cambiado de 3vw a 2vw */
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     width: 80%;
