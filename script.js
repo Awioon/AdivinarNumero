@@ -1,55 +1,41 @@
-let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-        let intentos = 0;
-        
-        const modo = document.getElementById("oscuro");
-        const body = document.body;
-        const boton = document.getElementById("boton");
-        const adivinar = document.getElementById("adiv");
-        const pista = document.getElementById("pista");
-        const reiniciar = document.getElementById("reiniciar");
-        const versionJuego = "2.1";
-        let oscuro = true;
+document.addEventListener('DOMContentLoaded', (event) => {
+    const boton = document.getElementById('boton');
+    const reiniciar = document.getElementById('reiniciar');
+    const oscuro = document.getElementById('oscuro');
+    const adiv = document.getElementById('adiv');
+    const pista = document.getElementById('pista');
+    const intentos = document.getElementById('intentos');
+    const version = document.getElementById('version');
 
-        // Cambiar entre modo claro y oscuro
-        modo.addEventListener("click", function() {
-            oscuro = !oscuro;
-            body.classList.toggle("modo-claro");
-            modo.textContent = oscuro ? "Modo claro" : "Modo oscuro";
-        });
+    let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    let contadorIntentos = 0;
 
-        // Mostrar la versión del juego
-        document.getElementById("version").textContent = versionJuego;
-        
-        // Verificación del número
-        boton.addEventListener("click", function() {
-            const numeroUsuario = parseInt(adivinar.value);
+    version.textContent = '1.0';
 
-            if (isNaN(numeroUsuario) || numeroUsuario < 1 || numeroUsuario > 100) {
-                pista.textContent = "Introduce un número entre 1 y 100.";
-                pista.style.color = "yellow";
-                return;
-            }
+    boton.addEventListener('click', () => {
+        const valor = parseInt(adiv.value);
+        contadorIntentos++;
+        intentos.textContent = `Intentos: ${contadorIntentos}`;
 
-            intentos++;
-            document.getElementById("intentos").textContent = `Intentos: ${intentos}`;
+        if (valor === numeroSecreto) {
+            pista.textContent = '¡Felicidades! Adivinaste el número.';
+        } else if (valor < numeroSecreto) {
+            pista.textContent = 'El número es mayor.';
+        } else {
+            pista.textContent = 'El número es menor.';
+        }
+    });
 
-            if (numeroUsuario === numeroAleatorio) {
-                pista.textContent = "¡Felicidades! ¡Adivinaste el número!";
-                pista.style.color = "green";
-            } else if (numeroUsuario < numeroAleatorio) {
-                pista.textContent = "El número es mayor. ¡Sigue intentando!";
-                pista.style.color = "red";
-            } else {
-                pista.textContent = "El número es menor. ¡Sigue intentando!";
-                pista.style.color = "red";
-            }
-        });
+    reiniciar.addEventListener('click', () => {
+        numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        contadorIntentos = 0;
+        intentos.textContent = 'Intentos: 0';
+        pista.textContent = '';
+        adiv.value = '';
+    });
 
-        // Reiniciar el juego
-        reiniciar.addEventListener("click", function() {
-            numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-            intentos = 0;
-            document.getElementById("intentos").textContent = "Intentos: 0";
-            pista.textContent = "";
-            adivinar.value = "";
-        });
+    oscuro.addEventListener('click', () => {
+        document.body.classList.toggle('oscuro');
+        oscuro.textContent = document.body.classList.contains('oscuro') ? 'Modo claro' : 'Modo oscuro';
+    });
+});
