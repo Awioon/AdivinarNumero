@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Adivinar número</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>Juego de Adivinar Número <small>v<span id="version"></span></small></h1>
+
+    <p>Adivina el número que dice la máquina</p>
+    
+    <p class="help">Cada recarga cambia el número</p>
+    <p id="intentos" class="intentos">Intentos: 0</p>
+    
+    <input class="num" type="number" placeholder="Introduce un número" id="adiv">
+    <button id="boton">Probar</button>
+    <br>
+    <button id="reiniciar">Reiniciar</button>
+    
+    <p id="pista"></p>
+    <button id="oscuro">Modo claro</button>
+    
+    
+</body>
+</html>

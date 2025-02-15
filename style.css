@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    padding: 5vw;
+}
+
+h1 {
+    font-size: 6vw;
+    margin-bottom: 5vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 4vw;
+    margin-bottom: 3vw;
+}
+
+.help {
+    font-size: 3vw;
+    color: #ddd;
+    margin-bottom: 5vw;
+}
+
+.intentos {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #ee4535;
+    margin-bottom: 5vw;
+}
+
+.num {
+    font-size: 4vw;
+    padding: 3vw;
+    width: 80%;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-bottom: 3vw;
+}
+
+.num::placeholder {
+    color: #ccc;
+}
+
+.num:focus {
+    border-color: #ff6f61;
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+}
+
+button {
+    font-size: 4vw;
+    padding: 3vw;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#pista {
+    font-size: 4vw;
+    margin-top: 5vw;
+    padding: 3vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo claro */
+body.modo-claro {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #000;
+}
+
+body.modo-claro .num {
+    border: 2px solid #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+body.modo-claro .num::placeholder {
+    color: #555;
+}
+
+body.modo-claro .num:focus {
+    border-color: #1e3c72;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(30, 60, 114, 0.5);
+}
+
+body.modo-claro button {
+    background-color: #1e3c72;
+    color: #fff;
+    border: 2px solid #000;
+}
+
+body.modo-claro button:hover {
+    background-color: #2a5298;
+}
+
+body.modo-claro #pista {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
